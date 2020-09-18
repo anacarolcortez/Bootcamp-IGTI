@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body{
+    background-image: url("patone.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Amatic SC', cursive;
+    font-size: 26px;
+}
+
+.container {
+    display: inline-block;
+    background-color:rgba(231, 224, 224, 0.8);
+    text-align: center;
+    border-radius: 20px;
+    padding: 40px;
+    margin: auto;
+}
+
+h1{
+    font-size: 50px;
+    padding: 20px;
+    color: black;
+    text-shadow: 1px 1px 5px whitesmoke;
+}
+
+main{
+    position: absolute;
+    left: 400px;
+    bottom: 90px;
+    text-align: center;
+     
+}
+ 
+.colors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;     
+}
+
+.showNumber{
+    display: block;
+    width: 40px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.result button{
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+input[type=range] {
+    width: 100%;
+    margin: 3.55px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: #ffffff;
+    border: 0.2px solid #cd7daf;
+    border-radius: 1.3px;
+    width: 100%;
+    height: 12.9px;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -3.75px;
+    width: 16px;
+    height: 20px;
+    background: #441a62;
+    border: 2.7px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+  }
+  input[type=range]::-moz-range-track {
+    background: #ffffff;
+    border: 0.2px solid #cd7daf;
+    border-radius: 1.3px;
+    width: 100%;
+    height: 12.9px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 16px;
+    height: 20px;
+    background: #441a62;
+    border: 2.7px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 5.55px 0;
+    color: transparent;
+    width: 100%;
+    height: 12.9px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #f5f5f5;
+    border: 0.2px solid #cd7daf;
+    border-radius: 2.6px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #ffffff;
+    border: 0.2px solid #cd7daf;
+    border-radius: 2.6px;
+  }
+  input[type=range]::-ms-thumb {
+    width: 16px;
+    height: 20px;
+    background: #441a62;
+    border: 2.7px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 0px;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #ffffff;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #ffffff;
+  }
+
+  @supports (-ms-ime-align:auto) {
+    input[type=range] {
+      margin: 0;
+    }
+}
