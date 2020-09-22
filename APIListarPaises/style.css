@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-size: 25px;
+    margin-left: 5rem;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    margin: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+.country-container {
+    display: flex;
+    padding: 3rem;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.country {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.add {
+    border-radius: 50%;
+    background-color: darkgreen;
+    color: whitesmoke0;
+    font-weight: bold;
+}
+
+.countryList,
+.favoriteList {
+    padding: 2rem;
+    margin-left: 5rem;
+}
+
+.countryList {
+    border: 1px solid rgb(180, 178, 178);
+    border-radius: 10px;
+}

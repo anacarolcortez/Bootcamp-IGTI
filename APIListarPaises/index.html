@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>API Dados de Países</title>
+</head>
+<body>
+    <h1>Escolha países da lista</h1>
+    <div class="country-container">
+        <div class="countryList">
+            <h5>
+                Países:
+                <span id="countCountries"></span>
+            </h5>
+            <h6>
+                População:
+                <span id="totalPopulationList"></span>
+            </h6>
+            <div id="tabCountries"></div>
+        </div> 
+        <div class="favoriteList">
+            <h5>
+                Países:
+                <span id="countFavorites"></span>
+            </h5>
+            <h6>
+                População:
+                <span id="totalPopulationFavorites"></span>
+            </h6>
+            <div id="tabFavorites"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
