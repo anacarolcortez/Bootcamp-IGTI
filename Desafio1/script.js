@@ -28,6 +28,8 @@ async function fetchUsers() {
         }
 
     })
+
+    console.log(allUsers);
     
 }
 
@@ -36,6 +38,10 @@ input.addEventListener('keyup', (event) => {
     render(word);
 })
 
+button.addEventListener('click', () => {
+    let word = input.value;
+    render(word);
+})
 
 function render(word) {
     let showSelected = document.querySelector(".insertResults");
@@ -65,6 +71,8 @@ function render(word) {
     showSelected.innerHTML = usersHTML;
     countUsers(count);
     averageAge(word, count);
+    countMale(word);
+    countFemale(word);
 }
 
 function countUsers(count) {
@@ -90,7 +98,34 @@ function sumAge(word) {
 
 function averageAge(word, count) {
     let average = document.querySelector("#averageAges");
+
     let sum = sumAge(word);
     let averageAge = sum/count;
-    average.textContent = averageAge;
+    average.textContent = averageAge.toFixed(2);
+}
+
+function countMale(word) {
+    let sumMale = document.querySelector("#male");
+    let count = 0;
+
+    const filterMale = allUsers.map(user => {
+        return { name, picture, age, gender } = user;
+    }).filter(res => res.name.includes(word))
+    .filter(r => r.gender == "male")
+
+    sumMale.textContent = filterMale.length;
+
+}
+
+function countFemale(word){
+    let sumFemale = document.querySelector("#female");
+    let count = 0;
+
+    const filterFemale = allUsers.map(user => {
+        return { name, picture, age, gender } = user;
+    }).filter(res => res.name.includes(word))
+    .filter(r => r.gender == "female")
+
+    sumFemale.textContent = filterFemale.length;
+
 }
