@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5rem;
+  background-color: #eccc68;
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  background-color: rgba(241, 242, 246, 0.8);
+  border: 1px solid darkgrey;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.info {
+  display: flex;
+}
+
+.results,
+.statistics {
+  margin: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid darkgrey;
+  padding: 1rem;
+  background-color: whitesmoke;
+}
+
+.results {
+  width: 65%;
+}
+
+.statistics {
+  width: 35%;
+}
+
+input {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  border: 1px solid darkgrey;
+  width: 70%;
+  padding: 0.3rem;
+  margin: 1rem;
+}
+
+.dataInput {
+  padding: 1rem;
+}
+
+button {
+  background-color: #eccc68;
+  border: 1px solid black;
+  padding: 0.5rem;
+  width: 5rem;
+  border-radius: 8px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0.7rem;
+  border: 1px solid darkgray;
+}
+
+.showResults {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h6 {
+  background-color: black;
+  font-size: 1px;
+  margin-bottom: 0.4rem;
+}
+
+p {
+  font-size: 18px;
+  margin: 0.2rem;
+}

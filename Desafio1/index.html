@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio Módulo 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <h2>Pesquisa de Usuários</h2>
+            <form class="dataInput">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name">
+                <button type="button" id="search">Buscar</button>
+            </form>
+        </div>
+        <div class="info">
+            <div class="results">
+                <h3>0 usuário(s) encontrado(s)</h3>
+            </div>
+            <div class="statistics">
+                <h3>Estatísticas</h3>
+                <h6>.</h6>
+                <div>
+                    <p>Sexo masculino:<span id="male">-</span></p>
+                </div>
+                <div>
+                    <p>Sexo feminino:<span id="female">-</span></p>
+                </div>
+                <div>
+                    <p>Soma idades:<span id="sumAges">-</span></p>
+                </div>
+                <div>
+                    <p>Média idades:<span id="averageAges">-</span></p>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
