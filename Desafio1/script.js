@@ -53,7 +53,7 @@ function render(word) {
                 </div>
                 <div>
                     <span>${one.name},</span>
-                    <span>${one.age}</span>
+                    <span>${one.age}anos</span>
                 </div>
             </div>
         `;
@@ -64,11 +64,33 @@ function render(word) {
 
     showSelected.innerHTML = usersHTML;
     countUsers(count);
-
+    averageAge(word, count);
 }
 
 function countUsers(count) {
     let sumUsers = document.querySelector(".showCount");
 
     sumUsers.textContent = `${count} usuário(s) encontrado(s)`
+}
+
+function sumAge(word) {
+    let ageSum = document.querySelector("#sumAges");
+
+    const sumAge = allUsers.map(user => {
+        return { name, picture, age, gender } = user;
+    }).filter(res => res.name.includes(word))
+    .map(r => r.age)
+    .reduce((accu, curr) => {
+        return  accu + curr;
+    }, 0); 
+    
+    ageSum.textContent = sumAge;
+    return sumAge;
+}
+
+function averageAge(word, count) {
+    let average = document.querySelector("#averageAges");
+    let sum = sumAge(word);
+    let averageAge = sum/count;
+    average.textContent = averageAge;
 }
