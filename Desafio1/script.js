@@ -50,7 +50,7 @@ function render(word) {
 
     allUsers.map(user => {
         return { name, picture, age, gender } = user;
-    }).filter(res => res.name.includes(word))
+    }).filter(res => res.name.includes(word) || res.name.includes(word.toUpperCase()))
     .forEach(one => {
         const userHTML= `
             <div class="showResults">
@@ -86,7 +86,7 @@ function sumAge(word) {
 
     const sumAge = allUsers.map(user => {
         return { name, picture, age, gender } = user;
-    }).filter(res => res.name.includes(word))
+    }).filter(res => res.name.includes(word) || res.name.includes(word.toUpperCase()))
     .map(r => r.age)
     .reduce((accu, curr) => {
         return  accu + curr;
@@ -110,7 +110,7 @@ function countMale(word) {
 
     const filterMale = allUsers.map(user => {
         return { name, picture, age, gender } = user;
-    }).filter(res => res.name.includes(word))
+    }).filter(res => res.name.includes(word) || res.name.includes(word.toUpperCase()))
     .filter(r => r.gender == "male")
 
     sumMale.textContent = filterMale.length;
@@ -123,7 +123,7 @@ function countFemale(word){
 
     const filterFemale = allUsers.map(user => {
         return { name, picture, age, gender } = user;
-    }).filter(res => res.name.includes(word))
+    }).filter(res => res.name.includes(word) || res.name.includes(word.toUpperCase()))
     .filter(r => r.gender == "female")
 
     sumFemale.textContent = filterFemale.length;
