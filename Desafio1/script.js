@@ -1,5 +1,6 @@
 let allUsers = [];
 let input = document.querySelector("#name");
+let button = document.querySelector("#search");
 
 window.addEventListener('load', () => {
 
@@ -37,29 +38,37 @@ input.addEventListener('keyup', (event) => {
 
 
 function render(word) {
-    let showSelected = document.querySelector(".results");
+    let showSelected = document.querySelector(".insertResults");
+    let usersHTML = "";
+    let count = 0;
 
-    //corrigir:
-    allUsers.filter(user => {
-        user.name.indexOf(word) > -1;
-    }).forEach(result => {
-            const { name, picture, age, gender } = result;
-
-            const userHTML= `
-                <div class="showResults">
-                    <div>
-                        <img src="${picture}" alt="${name}">
-                    </div>
-                    <div>
-                        <span>${name},</span>
-                        <span>${age}</span>
-                    </div>
+    allUsers.map(user => {
+        return { name, picture, age, gender } = user;
+    }).filter(res => res.name.includes(word))
+    .forEach(one => {
+        const userHTML= `
+            <div class="showResults">
+                <div>
+                    <img src="${one.picture}" alt="${one.name}">
                 </div>
-            `;
-    
-            showSelected.appendChild(userHTML);
-    });
+                <div>
+                    <span>${one.name},</span>
+                    <span>${one.age}</span>
+                </div>
+            </div>
+        `;
+
+        usersHTML += userHTML;
+        count++;
+    })
+
+    showSelected.innerHTML = usersHTML;
+    countUsers(count);
 
 }
 
-//implementar somas
+function countUsers(count) {
+    let sumUsers = document.querySelector(".showCount");
+
+    sumUsers.textContent = `${count} usuário(s) encontrado(s)`
+}
